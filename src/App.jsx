@@ -3,12 +3,13 @@ import Home from "./pages/Home"
 import ErrorPage from "./pages/ErrorPage"
 import Welcome from "./pages/Welcome"
 import UserInfo from "./pages/UserInfo"
+import { UserContext, UserProvider } from "./context/UserContext"
 
 
 function App() {
 
-
   return (
+    <UserProvider >
     <Routes>
       <Route path="/*" element={<ErrorPage />}/>
       <Route path="/" element={<Home />} />
@@ -16,6 +17,7 @@ function App() {
       <Route path="/user-info" element={<UserInfo name='Flan' age={20} city='casa' email='email@demo.com' id={1} role='teacher'
        />}/>
     </Routes>
+    </UserProvider>
   )
 }
 

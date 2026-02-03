@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../context/UserContext'
 
-function Welcome({name, age, city}) {
-
+function Welcome() {
+  const {user} = useContext(UserContext)
   return (
     <div>
-      <h1 className='text-center pt-5 text-3xl font-bold'>Welcome {name} ypu are {age} years old and living in {city}</h1>
+      <h1 className='text-center pt-5 text-3xl font-bold'>Welcome {user.name}  living in {user.city}</h1>
     </div>
   )
 }
