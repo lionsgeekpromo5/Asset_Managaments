@@ -26,6 +26,8 @@ function Counter() {
     }
   }, []);
 
+
+
   useEffect(() => {
     //side effects tp perform === light on / off
     if (isdoorOpen) {
@@ -34,6 +36,14 @@ function Counter() {
       setIsLightOn(false);
     }
   }, [isdoorOpen]);
+
+
+  
+    if (isdoorOpen){
+    return <div>retun after useEffect</div>
+  }
+
+
 
   return (
     <div className="flex gap-x-5">
