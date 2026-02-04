@@ -4,6 +4,7 @@ import ErrorPage from "./pages/ErrorPage"
 import Welcome from "./pages/Welcome"
 import UserInfo from "./pages/UserInfo"
 import { UserContext, UserProvider } from "./context/UserContext"
+import Counter from "./pages/Counter"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/welcome" element={<Welcome name='Flan' age={20} city='casa'/>} />
       <Route path="/user-info" element={<UserInfo name='Flan' age={20} city='casa' email='email@demo.com' id={1} role='teacher'
        />}/>
+       <Route path="/counter" element={<Counter />}/>
     </Routes>
     </UserProvider>
   )
