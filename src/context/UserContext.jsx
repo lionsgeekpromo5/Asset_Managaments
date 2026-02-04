@@ -7,10 +7,13 @@ export const UserContext = createContext()
 
 //* mail man li ghaywsl les envloppes 3la ga3 les page and ga3 l components
 export const UserProvider = ({children}) => {
+      const apiUrl = import.meta.env.VITE_APP_POST_URL
+
+      const [isLoading, setIsLoading] = useState(false)
 
     const [user, setUser] = useState({name:'avatar', email:'avatar@email.com', city: 'casa', lightMode:'light'})
     const statistics = 1000
-    const all = {statistics, user, setUser}
+    const all = {statistics, user, setUser, apiUrl, isLoading, setIsLoading}
     return (
         <UserContext.Provider value={all}>
             {children}

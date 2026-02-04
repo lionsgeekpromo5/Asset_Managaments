@@ -13,7 +13,6 @@ function Avatar() {
     }
     setUser(newUser);
   };
-  console.log(user);
 
   return (
     <div className="w-fll bg-white rounded-md flex items-center justify-between p-2">
