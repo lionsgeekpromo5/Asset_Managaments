@@ -6,6 +6,7 @@ import UserInfo from "./pages/UserInfo"
 import { UserContext, UserProvider } from "./context/UserContext"
 import Counter from "./pages/Counter"
 import Posts from "./pages/Posts"
+import TestAnimation from "./pages/testAnimation"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
        />}/>
        <Route path="/counter" element={<Counter />}/>
        <Route path="/posts" element={<Posts />}/>
+       <Route path="/framer-motion" element={<TestAnimation />}/>
     </Routes>
     </UserProvider>
   )

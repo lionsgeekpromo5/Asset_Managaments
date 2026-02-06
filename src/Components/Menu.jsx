@@ -13,6 +13,7 @@ function Menu() {
           <li>Contact</li>
           <Link to='/counter'>
           <li>Counter</li></Link>
+          <Link to='/framer-motion'><li>Framer Motion</li></Link>
       </ul>
       <Avatar />
     </div>
